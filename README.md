@@ -50,13 +50,14 @@ https://godotengine.org/
 
 ## 📷 Screenshot
 
+### Início da fase
+![Inicio](screenshots/inicio.png)
+
 ### Menu inicial
-![Menu](screenshots/Menu.png)
+![Menu](screenshots/menu.png)
 
-![Abertura](screenshots/Início.png)
-
-![Gameplay](screenshots/moedas.png)
-
+### Moedas
+![Moedas](screenshots/moedas.png)
 ---
 
 ## 👤 Autor
