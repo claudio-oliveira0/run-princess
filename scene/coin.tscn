@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cq7g77l8xajgl"]
+
+[ext_resource type="Texture2D" uid="uid://bwttw3bxqnl4" path="res://sprites/chests/ChatGPT Image 2 de mar. de 2026, 15_27_12.png" id="1_s0dlu"]
+[ext_resource type="Script" uid="uid://nn2ixlfdv7nd" path="res://scripts/coin.gd" id="1_ya73g"]
+[ext_resource type="AudioStream" uid="uid://dlanpx51cx8nd" path="res://sounds/pickupCoin.wav" id="3_leebs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s0dlu"]
+radius = 5.0990195
+
+[node name="Coin" type="Area2D" unique_id=651044900]
+script = ExtResource("1_ya73g")
+ground_offset = 4.1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1946056227]
+position = Vector2(0, 1.1920929e-07)
+scale = Vector2(0.02408854, 0.025390623)
+texture = ExtResource("1_s0dlu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1796602542]
+shape = SubResource("CircleShape2D_s0dlu")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=815560816]
+target_position = Vector2(0, 40)
+collision_mask = 255
+
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="." unique_id=2039219359]
+stream = ExtResource("3_leebs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

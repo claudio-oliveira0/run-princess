@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://wcynyhi18u3d"]
+
+[ext_resource type="Texture2D" uid="uid://ddrbiuulbpk2h" path="res://sprites/chests/ChatGPT Image 9 de mar. de 2026, 13_11_19.png" id="1_31wok"]
+[ext_resource type="Script" uid="uid://dwpdt3sdqkwt" path="res://scripts/finish_point.gd" id="1_xhk5l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sk6pu"]
+size = Vector2(56, 56)
+
+[node name="FinishPoint" type="Area2D" unique_id=1937167886]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_xhk5l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=748964714]
+position = Vector2(0, 2.3841858e-07)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_31wok")
+region_enabled = true
+region_rect = Rect2(479, 188, 576, 566)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2013556624]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_sk6pu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

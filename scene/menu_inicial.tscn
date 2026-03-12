@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dfnnq0u5fchem"]
+
+[ext_resource type="Script" uid="uid://dwmy3vegd6fcs" path="res://scripts/menu_inicial.gd" id="1_jjoit"]
+[ext_resource type="AudioStream" uid="uid://ckdo5vos2lrf7" path="res://sounds/djartmusic-return-to-the-8-bit-past-301282.mp3" id="2_thgog"]
+
+[node name="MenuInicial" type="Control" unique_id=1580572679]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 87.0
+offset_top = 18.0
+offset_right = 127.0
+offset_bottom = 58.0
+script = ExtResource("1_jjoit")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1499095729]
+visible = false
+layout_mode = 0
+offset_left = -72.0
+offset_top = 54.0
+offset_right = -32.0
+offset_bottom = 94.0
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1743061563]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1413199326]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1813311116]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(16.849718, 11.637973, 12.271833, 0.73333335)
+theme_override_font_sizes/font_size = 21
+text = "Run, Princess!"
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1553511026]
+layout_mode = 2
+text = "INICIAR JOGO"
+
+[node name="ControlsButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=278107697]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "CONTROLES"
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=982763509]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "SAIR"
+
+[node name="Panel" type="Panel" parent="." unique_id=1937540234]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 53.0
+offset_right = 80.0
+offset_bottom = 53.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1235566357]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -61.0
+offset_right = 130.0
+offset_bottom = -4.0
+theme_override_font_sizes/font_size = 6
+text = "← / →  - mover
+SPACE  - pular
+E      - atacar
+SHIFT  - correr
+R      - reiniciar fase
+"
+
+[node name="Button" type="Button" parent="Panel" unique_id=386619526]
+layout_mode = 0
+offset_left = 71.0
+offset_top = -2.0
+offset_right = 132.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 14
+text = "FECHAR"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=548437771]
+stream = ExtResource("2_thgog")
+autoplay = true
+parameters/looping = false
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d05xpx7ku52fc"]
+
+[ext_resource type="Script" uid="uid://bt132hg3pbc6b" path="res://scripts/chest.gd" id="1_26f88"]
+[ext_resource type="PackedScene" uid="uid://cq7g77l8xajgl" path="res://scene/coin.tscn" id="2_c0k1r"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iiumt"]
+load_path = "res://.godot/imported/RPG Chests.png-257e96934107cc5ad0886964a56bf758.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26f88"]
+size = Vector2(18, 18)
+
+[node name="Chest" type="StaticBody2D" unique_id=1719963293 groups=["chest"]]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_26f88")
+coin_scene = ExtResource("2_c0k1r")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1178990654 groups=["chest"]]
+position = Vector2(0.75000024, 0)
+scale = Vector2(1.015625, 1.15625)
+texture = SubResource("CompressedTexture2D_iiumt")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=439058579]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_26f88")
