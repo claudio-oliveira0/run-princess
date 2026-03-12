@@ -48,17 +48,7 @@ https://godotengine.org/
 
 ---
 
-## 📷 Screenshot
 
-### Início da fase
-![Inicio](screenshots/inicio.png)
-
-### Menu inicial
-![Menu](screenshots/menu.png)
-
-### Moedas
-![Moedas](screenshots/moedas.png)
----
 
 ## 👤 Autor
 
