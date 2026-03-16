@@ -15,6 +15,7 @@ SPACE → pular
 E → atacar  
 SHIFT → correr  
 R → reiniciar fase rapidamente  
+ESC → pause
 
 ---
 
